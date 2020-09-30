@@ -1,26 +1,25 @@
-files= $ls[wc-l]; 
-#user input
-
-echo "how many number of files in directory ?";
-echo "guess the number?";
-
-#read input
-read data;
-
-#check files
-function check{
-
-while [[ $data -gt 0]]
-do 
-
-if [ $data -gt $files]; then 
-echo "Files are high";
-
-elif [ $data -lt $files]; then
-echo "Files are low";
-
-else
-echo "Correct";
-fi
+start=0
+for file in $( ls )
+do
+   var[start++]="$file";
 done
-}
+stop=1
+
+while [ "$stop" != 0 ]
+do
+    echo "Enter your guess  :"
+    read data
+    if [ $data -eq $start ]
+    then
+        echo "You are correct!"
+    elif [ $answer -gt $correct ]
+    then
+        echo "You are up high!"
+    else
+        echo "You are down low!"
+    fi
+    if [ "$answer" == "$correct" ]
+    then 
+        abort=0
+    fi
+done
