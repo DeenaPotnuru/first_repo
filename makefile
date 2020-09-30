@@ -1,3 +1,4 @@
-Title of Project: Assignment
-Date: 28-09-2020
-Number of Lines: 26
+echo "# Assignment" > README.md
+	echo "Date: `date +'%y.%m.%d'`  Time: `date +'%H:%M:%S'` " >> README.md
+	echo "\nNumber of lines in the guessing game: " >> README.md
+	cat guessinggame.sh | wc -l >> README.md
