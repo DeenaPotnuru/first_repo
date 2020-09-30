@@ -14,9 +14,9 @@ do
         echo "You are correct!"
     elif [ $data -gt $start ]
     then
-        echo "You are up high!"
+        echo "You are high!"
     else
-        echo "You are down low!"
+        echo "You are low!"
     fi
     if [ "$data" == "$start" ]
     then 
