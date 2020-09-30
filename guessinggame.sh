@@ -12,14 +12,14 @@ do
     if [ $data -eq $start ]
     then
         echo "You are correct!"
-    elif [ $answer -gt $correct ]
+    elif [ $data -gt $start ]
     then
         echo "You are up high!"
     else
         echo "You are down low!"
     fi
-    if [ "$answer" == "$correct" ]
+    if [ "$data" == "$start" ]
     then 
-        abort=0
+        stop=0
     fi
 done
