@@ -1,8 +1,4 @@
-start=0
-for file in $( ls )
-do
-   var[start++]="$file";
-done
+start=$(ls | wc -l)
 stop=1
 
 while [ "$stop" != 0 ]
